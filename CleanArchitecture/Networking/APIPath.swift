@@ -19,4 +19,10 @@ let baseURL = environment.baseURL()
 
 struct Path {
     var gallary: String { return "\(baseURL)/search/photos"}
+    
+    
+    
+    
 }
+
+

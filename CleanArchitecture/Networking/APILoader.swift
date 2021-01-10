@@ -25,9 +25,9 @@ class APILoader<T: APIHandler> {
                 }
                 do {
                     let parsedResponse = try self.apiRequest.parseResponse(data: data,response: httpResponse)
-                    return completionHandler(parsedResponse, nil)
+                     completionHandler(parsedResponse, nil)
                 } catch {
-                    return completionHandler(nil, error)
+                     completionHandler(nil, error)
                 }
             }.resume()
         }

@@ -8,31 +8,25 @@
 
 import UIKit
 
-
-
 class GallaryViewController: UIViewController {
     public var gallaryViewModel: GallaryViewModel?
     private var collectionView: UICollectionView?
     private var dataSource: [Result]?
     var imageView: UIImageView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
         collectionView = UICollectionView(frame: self.view.frame,collectionViewLayout: UICollectionViewFlowLayout())
-        
-        
         let cellWidth : CGFloat = collectionView?.frame.size.width ?? 60 / 2.0
         let cellheight : CGFloat = collectionView?.frame.size.height ?? 60 - 2.0
-           let cellSize = CGSize(width: cellWidth , height:cellheight)
-
-           let layout = UICollectionViewFlowLayout()
-           layout.scrollDirection = .vertical 
-           layout.itemSize = cellSize
-           layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        let cellSize = CGSize(width: cellWidth , height:cellheight)
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.itemSize = cellSize
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        
         collectionView?.setCollectionViewLayout(layout, animated: true)
-        
-        
         collectionView?.register(GallaryCustomCell.self, forCellWithReuseIdentifier: GallaryCustomCell.identifier)
         collectionView?.backgroundColor = UIColor.white
         collectionView?.dataSource = self
@@ -92,6 +86,4 @@ extension GallaryViewController: UICollectionViewDelegateFlowLayout
 
         return CGSize(width: cellWidth , height:  cellheight)
     }
-    
-
 }
