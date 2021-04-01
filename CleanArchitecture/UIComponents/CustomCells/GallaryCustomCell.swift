@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 class GallaryCustomCell: UICollectionViewCell {
     static let identifier = "GallaryCustomCell"
-    private var myImageView : UIImageView?
+    private var myImageView : LazyImageView?
     private var titleLabel: UILabel?
     
     override init(frame: CGRect) {
@@ -28,7 +28,7 @@ class GallaryCustomCell: UICollectionViewCell {
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(roundedRect:self.bounds, cornerRadius:self.contentView.layer.cornerRadius).cgPath
         
-        myImageView = UIImageView()
+        myImageView = LazyImageView()
         myImageView?.contentMode = .scaleAspectFill
         
         titleLabel = UILabel()
@@ -62,7 +62,7 @@ class GallaryCustomCell: UICollectionViewCell {
         guard let imgURL = URL(string: imageURL) else {
             return
         }
-        myImageView?.image = UIImage(url: imgURL)
+        myImageView?.loadImage(imageURL: imgURL, placeHolderImage: "")
     }
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E567D45260F965000BC8E37 /* GalleryAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E567D44260F965000BC8E37 /* GalleryAPITests.swift */; };
+		7E6D9170260C29AA008968AE /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6D916F260C29AA008968AE /* LazyImageView.swift */; };
 		7EAC484625AB26A7002D34F9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAC484525AB26A7002D34F9 /* Constants.swift */; };
 		9B289BEE257CA6C700C546AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B289BED257CA6C700C546AB /* AppDelegate.swift */; };
 		9B289BF0257CA6C700C546AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B289BEF257CA6C700C546AB /* SceneDelegate.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E567D44260F965000BC8E37 /* GalleryAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryAPITests.swift; sourceTree = "<group>"; };
+		7E6D916F260C29AA008968AE /* LazyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyImageView.swift; sourceTree = "<group>"; };
 		7EAC484525AB26A7002D34F9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9B289BEA257CA6C700C546AB /* CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B289BED257CA6C700C546AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 			children = (
 				9B289C07257CA6C800C546AB /* CleanArchitectureTests.swift */,
 				9B289C09257CA6C800C546AB /* Info.plist */,
+				7E567D44260F965000BC8E37 /* GalleryAPITests.swift */,
 			);
 			path = CleanArchitectureTests;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				9B4F6E77258DD57500506B38 /* CustomCells */,
+				7E6D916F260C29AA008968AE /* LazyImageView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -319,6 +325,7 @@
 				9B48763C2588800400D85BC4 /* APIEnvironment.swift in Sources */,
 				9B289BF0257CA6C700C546AB /* SceneDelegate.swift in Sources */,
 				9B4F6E79258DD58F00506B38 /* GallaryCustomCell.swift in Sources */,
+				7E6D9170260C29AA008968AE /* LazyImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E567D45260F965000BC8E37 /* GalleryAPITests.swift in Sources */,
 				9B289C08257CA6C800C546AB /* CleanArchitectureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
