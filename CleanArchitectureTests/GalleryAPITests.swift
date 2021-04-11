@@ -13,7 +13,7 @@ import XCTest
 
 class GalleryAPITests: XCTestCase  {
     func test_api_for_request() {
-        let api = GallaryAPI()
+        let api = GalleryAPI()
         let params = ["client_id":Constants.APIKeys.kClientKey,"page" : 1, "query" : "dog"] as [String : Any];
         let request = api.makeRequest(from: params)
         
@@ -24,11 +24,11 @@ class GalleryAPITests: XCTestCase  {
     }
     
     func test_api_for_parsing_logic() {
-        let api = GallaryAPI()
+        let api = GalleryAPI()
         let data = ["total" : 1000, "total_pages": 1000, "result": nil]
         let encoder = JSONEncoder()
         if let jsonData = try? encoder.encode(data),
-           let url = URL(string: Path().gallary),
+           let url = URL(string: APIPath().gallary),
            let response = HTTPURLResponse(url: url, statusCode: 200, httpVersion: "", headerFields: nil) {
             
             let response = try? api.parseResponse(data: jsonData, response: response)
