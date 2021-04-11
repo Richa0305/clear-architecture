@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         if let gallaryViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "GallaryViewController") as? GallaryViewController {
-            gallaryViewController.gallaryViewModel = GallaryViewModel()
+            gallaryViewController.gallaryViewModel = GalleryViewModel()
             self.window?.rootViewController = gallaryViewController
         }
     }

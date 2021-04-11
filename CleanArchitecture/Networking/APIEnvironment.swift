@@ -7,7 +7,7 @@
 //
 //"https://api.unsplash.com/search/photos?client_id=JYRARXHZnEcTwGYa1sTS8mpR7WebBsH4Yn9Knsc-eAo&page=1&query=dog"
 import Foundation
-enum Environment {
+enum APIEnvironment {
     case development
     case staging
     case production
@@ -21,7 +21,7 @@ enum Environment {
         case .development:
             return "unsplash.com"
         case .staging:
-            return "sunsplash.com"
+            return "unsplash.com"
         case .production:
             return "unsplash.com"
         }

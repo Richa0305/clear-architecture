@@ -10,19 +10,16 @@ import Foundation
 
 
 #if DEBUG
-let environment = Environment.development
+let environment = APIEnvironment.development
 #else
-let environment = Environment.production
+let environment = APIEnvironment.production
 #endif
 
 let baseURL = environment.baseURL()
 
-struct Path {
+struct APIPath {
     var gallary: String { return "\(baseURL)/search/photos"}
-    
-    
-    
-    
+
 }
 
 

@@ -9,7 +9,7 @@
 import UIKit
 
 class GallaryViewController: UIViewController {
-    public var gallaryViewModel: GallaryViewModel?
+    public var gallaryViewModel: GalleryViewModel?
     private var collectionView: UICollectionView?
     private var dataSource: [Result]?
     var imageView: UIImageView?
@@ -40,7 +40,7 @@ class GallaryViewController: UIViewController {
         gallaryViewModel?.getAPIData(param: ["client_id":Constants.APIKeys.kClientKey,"page" : 1, "query" : "dog"], completion: { (model, error) in
             if let _ = error {
                 DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                    let alert = UIAlertController(title: "Error", message: error?.message, preferredStyle: UIAlertController.Style.alert)
                     self.present(alert, animated: true, completion: nil)
                 }
             } else {

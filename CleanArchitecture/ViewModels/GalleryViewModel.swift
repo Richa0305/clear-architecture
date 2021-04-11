@@ -1,5 +1,5 @@
 //
-//  GallaryViewModel.swift
+//  GalleryViewModel.swift
 //  CleanArchitecture
 //
 //  Created by richa on 15/12/20.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-class GallaryViewModel {
-    func getAPIData(param: [String: Any], completion: @escaping (GalleryModel?, Error?) -> ()) {
-        let request = GallaryAPI()
+class GalleryViewModel {
+    func getAPIData(param: [String: Any], completion: @escaping (GalleryModel?, ServiceError?) -> ()) {
+        let request = GalleryAPI()
         
-        let apiLoader = APILoader(apiRequest: request)
+        let apiLoader = APILoader(apiHandler: request)
         apiLoader.loadAPIRequest(requestData: param) { (model, error) in
             if let _ = error {
                 completion(nil, error)
@@ -22,3 +22,4 @@ class GallaryViewModel {
         }
     }
 }
+

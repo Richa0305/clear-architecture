@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct GallaryAPI: APIHandler {
+struct GalleryAPI: APIHandler {
     
     func makeRequest(from param: [String: Any]) -> URLRequest? {
-        let urlString =  Path().gallary
+        let urlString =  APIPath().gallary
         if var url = URL(string: urlString) {
             if param.count > 0 {
                 url = setQueryParams(parameters: param, url: url)

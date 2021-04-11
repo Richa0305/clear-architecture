@@ -9,27 +9,43 @@
 import Foundation
 
 class APILoader<T: APIHandler> {
-    let apiRequest: T
-    let urlSession: URLSession
+    var apiHandler: T
+    var urlSession: URLSession
     
-    init(apiRequest: T, urlSession: URLSession = .shared) {
-        self.apiRequest = apiRequest
+    init(apiHandler: T, urlSession: URLSession = .shared) {
+        self.apiHandler = apiHandler
         self.urlSession = urlSession
     }
     
-    func loadAPIRequest(requestData: T.RequestDataType, completionHandler: @escaping (T.ResponseDataType?, Error?) -> ()) {
-        if let urlRequest = apiRequest.makeRequest(from: requestData) {
+    func loadAPIRequest(requestData: T.RequestDataType, completionHandler: @escaping (T.ResponseDataType?, ServiceError?) -> ()) {
+        if let urlRequest = apiHandler.makeRequest(from: requestData) {
             urlSession.dataTask(with: urlRequest) { (data, response, error) in
-                guard let data = data, let httpResponse = response as? HTTPURLResponse else {
-                    return completionHandler(nil, error)
+                
+                if let httpResponse = response as? HTTPURLResponse {
+                    
+                    guard error == nil else {
+                        completionHandler(nil, ServiceError(httpStatus: httpResponse.statusCode, message: "ServiceError : \(error?.localizedDescription ?? "Unknown Error")"))
+                        return
+                    }
+                    
+                    guard let responseData = data else {
+                        completionHandler(nil, ServiceError(httpStatus: httpResponse.statusCode, message: "ServiceError : \(error?.localizedDescription ?? "Unknown Error")"))
+                        return
+                    }
+                    
+                    do {
+                        let parsedResponse = try self.apiHandler.parseResponse(data: responseData, response: httpResponse)
+                         completionHandler(parsedResponse, nil)
+                    } catch {
+                         completionHandler(nil, ServiceError(httpStatus:  httpResponse.statusCode, message: "ServiceError : \(error.localizedDescription)"))
+                    }
+                    
                 }
-                do {
-                    let parsedResponse = try self.apiRequest.parseResponse(data: data,response: httpResponse)
-                     completionHandler(parsedResponse, nil)
-                } catch {
-                     completionHandler(nil, error)
-                }
+                
+               
             }.resume()
         }
     }
 }
+
+

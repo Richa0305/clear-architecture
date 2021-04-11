@@ -23,7 +23,7 @@
 		9B48763A258878B700D85BC4 /* APILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487639258878B700D85BC4 /* APILoader.swift */; };
 		9B48763C2588800400D85BC4 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48763B2588800400D85BC4 /* APIEnvironment.swift */; };
 		9B48763E2588800F00D85BC4 /* APIPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48763D2588800F00D85BC4 /* APIPath.swift */; };
-		9B4876402588824E00D85BC4 /* GallaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48763F2588824E00D85BC4 /* GallaryViewModel.swift */; };
+		9B4876402588824E00D85BC4 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48763F2588824E00D85BC4 /* GalleryViewModel.swift */; };
 		9B487642258895D500D85BC4 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487641258895D500D85BC4 /* Observable.swift */; };
 		9B49D5BD2589933E0003166F /* GalleryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49D5BC2589933E0003166F /* GalleryAPI.swift */; };
 		9B49D5BF2589D1940003166F /* RequestHandler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49D5BE2589D1940003166F /* RequestHandler+Extension.swift */; };
@@ -62,7 +62,7 @@
 		9B487639258878B700D85BC4 /* APILoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILoader.swift; sourceTree = "<group>"; };
 		9B48763B2588800400D85BC4 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
 		9B48763D2588800F00D85BC4 /* APIPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPath.swift; sourceTree = "<group>"; };
-		9B48763F2588824E00D85BC4 /* GallaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallaryViewModel.swift; sourceTree = "<group>"; };
+		9B48763F2588824E00D85BC4 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		9B487641258895D500D85BC4 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		9B49D5BC2589933E0003166F /* GalleryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryAPI.swift; sourceTree = "<group>"; };
 		9B49D5BE2589D1940003166F /* RequestHandler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestHandler+Extension.swift"; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 		9B8948B8257EC89400E7CC05 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				9B48763F2588824E00D85BC4 /* GallaryViewModel.swift */,
+				9B48763F2588824E00D85BC4 /* GalleryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -315,7 +315,7 @@
 				9B49D5BF2589D1940003166F /* RequestHandler+Extension.swift in Sources */,
 				9B48763A258878B700D85BC4 /* APILoader.swift in Sources */,
 				9B49D5C12589D1DE0003166F /* ResponseHandler+Extension.swift in Sources */,
-				9B4876402588824E00D85BC4 /* GallaryViewModel.swift in Sources */,
+				9B4876402588824E00D85BC4 /* GalleryViewModel.swift in Sources */,
 				7EAC484625AB26A7002D34F9 /* Constants.swift in Sources */,
 				9B289BF2257CA6C700C546AB /* GallaryViewController.swift in Sources */,
 				9B48763E2588800F00D85BC4 /* APIPath.swift in Sources */,
