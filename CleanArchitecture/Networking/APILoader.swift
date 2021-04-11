@@ -8,7 +8,7 @@
 
 import Foundation
 
-class APILoader<T: APIHandler> {
+struct APILoader<T: APIHandler> {
     var apiHandler: T
     var urlSession: URLSession
     

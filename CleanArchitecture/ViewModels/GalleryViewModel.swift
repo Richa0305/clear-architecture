@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GalleryViewModel {
+struct GalleryViewModel {
     func getAPIData(param: [String: Any], completion: @escaping (GalleryModel?, ServiceError?) -> ()) {
         let request = GalleryAPI()
         
